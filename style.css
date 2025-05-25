@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f7f9fb;
+  color: #222;
+}
+header {
+  background: #1a2236;
+  color: #fff;
+  padding: 2rem 0 1.5rem 0;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+header p {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.2rem;
+  color: #b0b8d1;
+}
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(30, 40, 90, 0.07);
+}
+h2 {
+  color: #1a2236;
+  margin-top: 0;
+}
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.service {
+  flex: 1 1 250px;
+  background: #f1f4fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(30, 40, 90, 0.04);
+}
+.service h3 {
+  margin-top: 0;
+  color: #2b3467;
+}
+.cta {
+  text-align: center;
+  margin: 3rem 0 1rem 0;
+}
+.cta a {
+  display: inline-block;
+  background: #2b3467;
+  color: #fff;
+  padding: 1rem 2.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.cta a:hover {
+  background: #1a2236;
+}
+footer {
+  text-align: center;
+  color: #888;
+  padding: 1.5rem 0;
+  font-size: 0.95rem;
+}
+@media (max-width: 700px) {
+  section {
+    padding: 1rem;
+  }
+  .services {
+    flex-direction: column;
+  }
+}
