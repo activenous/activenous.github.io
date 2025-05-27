@@ -162,28 +162,23 @@
             conversation.
           </p>
           <div class="contact-card p-4 shadow-sm border-0">
-            <form>
+            <form action="https://formspree.io/f/xjkwngbj" method="POST">
               <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control form-control-dark" id="name" placeholder="Your Name" required />
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
                 <input
-                  type="email"
+                  type="text"
                   class="form-control form-control-dark"
-                  id="email"
-                  placeholder="you@email.com"
+                  name="name"
+                  placeholder="Your Name"
                   required />
               </div>
               <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control form-control-dark" name="email" />
+              </div>
+              <div class="mb-3">
                 <label for="message" class="form-label">Message</label>
-                <textarea
-                  class="form-control form-control-dark"
-                  id="message"
-                  rows="5"
-                  placeholder="How can we help you?"
-                  required></textarea>
+                <textarea name="message" class="form-control form-control-dark"></textarea>
               </div>
               <button type="submit" class="btn btn-gradient btn-lg px-4 shadow">Send Message</button>
             </form>
