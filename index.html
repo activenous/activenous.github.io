@@ -44,28 +44,129 @@
         <!-- Digital workflow SVG background -->
         <svg viewBox="0 0 4000 1440" fill="#7de0e6" xmlns="http://www.w3.org/2000/svg">
           <defs>
+            <!-- Background gradients -->
             <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
               <stop offset="0%" stop-color="#d0e0f7" />
               <stop offset="100%" stop-color="#e0e4ef" />
             </linearGradient>
-            <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#0d6efd" />
-              <stop offset="100%" stop-color="#2b3467" />
+
+            <!-- Curve gradients in blue/teal range -->
+            <linearGradient id="lightBlueGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#87ceeb" />
+              <stop offset="50%" stop-color="#4dd0e1" />
+              <stop offset="100%" stop-color="#26c6da" />
             </linearGradient>
-            <linearGradient id="lineGrad2" x1="1" y1="0" x2="0" y2="1">
+
+            <linearGradient id="tealGrad" x1="1" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#40e0d0" />
+              <stop offset="50%" stop-color="#48cae4" />
+              <stop offset="100%" stop-color="#0096c7" />
+            </linearGradient>
+
+            <linearGradient id="aquaGrad" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0%" stop-color="#7dd3fc" />
+              <stop offset="50%" stop-color="#06b6d4" />
+              <stop offset="100%" stop-color="#0891b2" />
+            </linearGradient>
+
+            <!-- Animated light gradient -->
+            <linearGradient id="lightGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="rgba(255,255,255,0)" />
+              <stop offset="45%" stop-color="rgba(255,255,255,0)" />
+              <stop offset="50%" stop-color="rgba(255,255,255,0.8)" />
+              <stop offset="55%" stop-color="rgba(255,255,255,0)" />
+              <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+              <animateTransform
+                attributeName="gradientTransform"
+                type="translate"
+                values="-200 0; 4200 0; -200 0"
+                dur="4s"
+                repeatCount="indefinite" />
+            </linearGradient>
+
+            <!-- Background gradient -->
+            <linearGradient id="darkBg" x1="1" y1="0" x2="0" y2="1">
               <stop offset="0%" stop-color="#1a1d20" />
               <stop offset="100%" stop-color="#2c3034" />
             </linearGradient>
           </defs>
-          <rect width="4000" height="1440" fill="url(#lineGrad2)" />
-          <g opacity="0.18">
-            <path d="M200 900 Q600 400 1200 800 T1800 300" stroke="url(#lineGrad)" stroke-width="8" fill="none" />
-            <path d="M0 600 Q800 200 1920 900" stroke="url(#lineGrad)" stroke-width="6" fill="none" />
-            <circle cx="600" cy="400" r="18" fill="#0d6efd" />
-            <circle cx="1200" cy="800" r="14" fill="#2b3467" />
-            <circle cx="1800" cy="300" r="10" fill="#0d6efd" />
-            <circle cx="800" cy="200" r="12" fill="#2b3467" />
-            <circle cx="1600" cy="700" r="8" fill="#0d6efd" />
+
+          <!-- Background -->
+          <rect width="4000" height="1440" fill="url(#darkBg)" />
+
+          <!-- Main curves group -->
+          <g opacity="0.35">
+            <!-- Original curves with new colors -->
+            <path d="M200 900 Q600 400 1200 800 T1800 300" stroke="url(#lightBlueGrad)" stroke-width="8" fill="none" />
+            <path d="M0 600 Q800 200 1920 900" stroke="url(#tealGrad)" stroke-width="6" fill="none" />
+
+            <!-- Additional abstract curves -->
+            <path
+              d="M-100 1200 Q400 800 900 1100 T1500 900 T2200 1000 T3000 800"
+              stroke="url(#aquaGrad)"
+              stroke-width="5"
+              fill="none" />
+            <path
+              d="M500 100 Q1000 400 1500 200 T2500 300 T3500 150"
+              stroke="url(#lightBlueGrad)"
+              stroke-width="7"
+              fill="none" />
+            <path
+              d="M100 1000 Q700 600 1300 900 T2100 700 T3200 850"
+              stroke="url(#tealGrad)"
+              stroke-width="4"
+              fill="none" />
+            <path
+              d="M800 50 Q1200 250 1600 100 T2400 200 T3200 50 T4000 150"
+              stroke="url(#aquaGrad)"
+              stroke-width="6"
+              fill="none" />
+            <path
+              d="M-50 800 Q500 500 1000 750 T1800 600 T2800 700 T3800 500"
+              stroke="url(#lightBlueGrad)"
+              stroke-width="3"
+              fill="none" />
+
+            <!-- Decorative circles -->
+            <circle cx="600" cy="400" r="18" fill="#4dd0e1" />
+            <circle cx="1200" cy="800" r="14" fill="#26c6da" />
+            <circle cx="1800" cy="300" r="10" fill="#40e0d0" />
+            <circle cx="800" cy="200" r="12" fill="#48cae4" />
+            <circle cx="1600" cy="700" r="8" fill="#06b6d4" />
+            <circle cx="1000" cy="400" r="6" fill="#7dd3fc" />
+            <circle cx="2200" cy="1000" r="9" fill="#0891b2" />
+            <circle cx="2500" cy="300" r="7" fill="#4dd0e1" />
+          </g>
+
+          <!-- Animated light overlay -->
+          <g opacity="0.6">
+            <path d="M200 900 Q600 400 1200 800 T1800 300" stroke="url(#lightGrad)" stroke-width="12" fill="none" />
+            <path d="M0 600 Q800 200 1920 900" stroke="url(#lightGrad)" stroke-width="10" fill="none" />
+            <path
+              d="M-100 1200 Q400 800 900 1100 T1500 900 T2200 1000 T3000 800"
+              stroke="url(#lightGrad)"
+              stroke-width="9"
+              fill="none" />
+            <path
+              d="M500 100 Q1000 400 1500 200 T2500 300 T3500 150"
+              stroke="url(#lightGrad)"
+              stroke-width="11"
+              fill="none" />
+            <path
+              d="M100 1000 Q700 600 1300 900 T2100 700 T3200 850"
+              stroke="url(#lightGrad)"
+              stroke-width="8"
+              fill="none" />
+            <path
+              d="M800 50 Q1200 250 1600 100 T2400 200 T3200 50 T4000 150"
+              stroke="url(#lightGrad)"
+              stroke-width="10"
+              fill="none" />
+            <path
+              d="M-50 800 Q500 500 1000 750 T1800 600 T2800 700 T3800 500"
+              stroke="url(#lightGrad)"
+              stroke-width="7"
+              fill="none" />
           </g>
         </svg>
         <div class="d-flex flex-column align-items-center justify-content-center position-relative" style="z-index: 1">
@@ -195,9 +296,9 @@
             <div class="mt-4">
               <p class="mb-1">
                 <i class="fas fa-envelope text-primary me-2"></i>
-                <a href="mailto:info@activenous.com">info@activenous.com</a>
+                <a href="mailto:info@activenous.eu">info@activenous.eu</a>
               </p>
-              <p class="mb-0"><i class="fas fa-globe text-primary me-2"></i> activenous.tech</p>
+              <p class="mb-0"><i class="fas fa-globe text-primary me-2"></i> www.activenous.eu</p>
             </div>
           </div>
         </div>
